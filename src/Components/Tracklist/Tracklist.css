@@ -1,0 +1,11 @@
+/*.tracklist > ul {
+  list-style-type: none;
+}*/
+
+.tracklist {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}

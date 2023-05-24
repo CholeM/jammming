@@ -1,0 +1,7 @@
+.play-container {
+  min-height: 50vh;
+  margin-top: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  background: #121212;
+  border-radius: 8px;
+}

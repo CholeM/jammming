@@ -1,0 +1,17 @@
+.bar-container {
+  background: #121212;
+  color: #fff;
+  padding: 1rem 0;
+  border-radius: 8px;
+}
+
+.search-btn {
+  background-color: #010101;
+  color: #fff;
+  cursor: pointer;
+  width: 150px;
+  padding: .75rem 0;
+  border-radius: 8px;
+  font-weight: 700;
+  border: none;
+}

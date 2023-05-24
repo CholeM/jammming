@@ -1,8 +1,20 @@
 import React from "react";
+import Track from "../Track/Track";
 
-function Tracklist() {
+import './Tracklist.css';
+
+function Tracklist({ tracks }) {
   return (
-    <div>
+    <div className="tracklist">
+      <div>
+        {tracks.map(track => {
+          return (
+            <div key={track.id}>
+              <Track track={track} />
+            </div>
+          )
+        })}
+      </div>
     </div>
   );
 };
