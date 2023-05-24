@@ -5,6 +5,27 @@
   border-radius: 8px;
 }
 
+.input {
+  min-width: 300px;
+  height: 48px;
+  border: none;
+  border-radius: 500px;
+  line-height: 2rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding-left: 1rem;
+  background-color: #242424;
+  color: #fff!important;
+  text-overflow: ellipsis;
+}
+
+.input:focus {
+  border: 1px solid #fff;
+}
+
 .search-btn {
   background-color: #010101;
   color: #fff;
