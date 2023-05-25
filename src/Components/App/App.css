@@ -9,3 +9,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
+
+.green {
+  color: #1ed760;
+}

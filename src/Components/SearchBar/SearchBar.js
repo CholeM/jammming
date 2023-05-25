@@ -1,48 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import './SearchBar.css';
 
-import tracks from '../../mockData/tracks.json';
+function SearchBar(props) {
+  const { onSearchResults } = props;
+  const [term, setTerm] = useState("");
 
-function SearchBar({ setSearchResults }) {
-  const data = tracks.tracks;
+  const handleTermChange = useCallback((e) => {
+    setTerm(e.target.value);
+  }, []);
 
-  console.log(data)
-
-  const [search, setSearch] = useState('');
-  const [searchWords, setSearchWords] = useState('');
-
-  console.log(search)
-  console.log(searchWords)
-
-  function handleChange(e) {
-    setSearch(e.target.value);
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault()
-    setSearchWords(search)
-    console.log('submitted')
-  }
-
-  useEffect(() => {
-    setSearchResults(data)
-  }, [])
+  const handleSearch = useCallback(() => {
+    onSearchResults(term);
+  }, [onSearchResults, term]);
 
   return (
     <div className="bar-container">
-      <form autoComplete="off">
-        <input
-          type="text"
-          id="search"
-          className="input"
-          onChange={handleChange}
-          placeholder="Enter term"
-        />
-        <button type="submit" className="search-btn" onClick={handleSubmit}>
-          Search
-        </button>
-      </form>
+      <input
+        type="text"
+        id="search"
+        className="input"
+        onChange={handleTermChange}
+        placeholder="Enter term"
+      />
+      <button type="submit" className="search-btn" onClick={handleSearch}>
+        Search
+      </button>
     </div>
   );
 };

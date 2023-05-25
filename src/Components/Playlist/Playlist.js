@@ -1,19 +1,25 @@
-import React, { useState } from "react";
+import React, { useCallback } from "react";
 
 import './Playlist.css';
+import Tracklist from "../Tracklist/Tracklist";
 
-function Playlist() {
-  const [playlist, setPlaylist] = useState([]);
-  console.log(playlist);
+function Playlist(props) {
+  const { onNameChange, onSave, playlistTracks, onRemove } = props;
 
-  function handleChange(e) {
-    setPlaylist(e.target.value);
-  }
+  const handleNameChange = useCallback((e) => {
+    onNameChange(e.target.value);
+  }, [onNameChange]);
 
   return (
     <div className="play-container">
       <h2>Playlist</h2>
-      <button type='button' className='playlist-btn' onChange={handleChange}>
+      <input className="input" onChange={handleNameChange} defaultValue={"New Playlist"} />
+      <Tracklist
+        tracks={playlistTracks}
+        isRemoval={true}
+        onRemove={onRemove}
+      />
+      <button type='button' className='playlist-btn' onClick={onSave}>
         Save To Spotify
       </button>
     </div>

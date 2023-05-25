@@ -3,11 +3,12 @@ import React from "react";
 import './SearchResults.css';
 import Tracklist from "../Tracklist/Tracklist";
 
-function SearchResults({ tracks }) {
+function SearchResults(props) {
+  const { searchResults, onAdd } = props;
   return (
     <div className="results-container">
       <h2>Search Results</h2>
-      <Tracklist tracks={tracks} />
+      <Tracklist tracks={searchResults} onAdd={onAdd} />
     </div>
   );
 };
