@@ -47,7 +47,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Ja<span className="green">mmm</span>ing</h1>
-      <SearchBar onSearchResults={search} />
+      <div className="search"><SearchBar onSearchResults={search} /></div>
       <div className="App-container">
         <SearchResults searchResults={searchResults} onAdd={addTrack} />
         <Playlist
@@ -58,6 +58,7 @@ function App() {
           onSave={savePlaylist} 
         />
       </div>
+      <footer>Codecademy Project by CholeM</footer>
     </div>  
   );
 }

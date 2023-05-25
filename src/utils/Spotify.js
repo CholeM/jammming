@@ -73,7 +73,12 @@ const Spotify = {
         });
       });
     });
-  }
+  },
+  componentDidMount() {
+    window.addEventListener("load", () => {
+      Spotify.getAccessToken();
+    });
+  },
 };
 
 export default Spotify;

@@ -1,15 +1,26 @@
 .App {
   text-align: center;
-  padding: 0 2rem 2rem 2rem;
+}
+
+.search {
+  padding: 0 2rem;
 }
 
 .App-container {
-  width: 100%;
   display: grid;
+  padding: 0 2rem 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
 
 .green {
   color: #1ed760;
+}
+
+footer {
+  padding: 1rem 0;
+  background-color: #242424;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
 }
