@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Jammming - A Spotify Playlist App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Jammming is a Spotify Playlist app, where the user can search tracks and add them to a new playlist. Save the playlist and it will appear on the user's Spotify account.
 
 ## Available Scripts
 
